@@ -11,15 +11,19 @@ class TaskController extends Controller
     // Listar todas las tareas
     public function index(Request $request)
     {
-        // Obtener el término de búsqueda de la descripción (si está presente)
-        $search = $request->input('search');
+        $search = $request->input('search'); // Término de búsqueda
+        $size = (int) $request->input('size', 10); // Tamaño de paginación
+        $sort = $request->input('sort', 'created_at'); // Campo y dirección de orden
+        $sort_desc = str_starts_with($sort, '-') ? 'desc' : 'asc'; // Verifica si es descendente
+        $sort_field = ltrim($sort, '-'); // Remover el "-" para obtener el campo
+        $completed = $request->boolean('completed');
 
-        // Consultar las tareas, filtrando por la descripción si se proporciona un término de búsqueda
-        $tasks = Task::when($search, function ($query, $search) {
-            return $query->where('description', 'like', '%' . $search . '%');
-        })->paginate(10);  // Paginación de 10 resultados por página
+        $tasks = Task::query()
+            ->when($search, fn($query) => $query->where('description', 'like', "%{$search}%"))
+            ->when(!is_null($request->input('completed')), fn($query) => $query->where('completed', $completed))
+            ->orderBy($sort_field, $sort_desc)
+            ->paginate($size);
 
-        // Devolver los resultados paginados
         return response()->json($tasks);
     }
 
