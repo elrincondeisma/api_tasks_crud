@@ -30,19 +30,19 @@ Sigue estos pasos para configurar el proyecto en tu entorno local:
 2. Endpoints
 La API ofrece los siguientes endpoints para gestionar las tareas:
 
-	•	GET /api/tasks - Listar todas las tareas (soporta búsqueda por descripción y paginación).
-	•	POST /api/tasks - Crear una nueva tarea.
-	•	GET /api/tasks/{id} - Obtener una tarea por su ID.
-	•	PUT /api/tasks/{id} - Actualizar una tarea existente.
-	•	DELETE /api/tasks/{id} - Eliminar una tarea.
+	- GET /api/tasks - Listar todas las tareas (soporta búsqueda por descripción y paginación).
+	- POST /api/tasks - Crear una nueva tarea.
+	- GET /api/tasks/{id} - Obtener una tarea por su ID.
+	- PUT /api/tasks/{id} - Actualizar una tarea existente.
+	- DELETE /api/tasks/{id} - Eliminar una tarea.
 
 3. Parámetros de búsqueda
 
-• GET /api/tasks?search=palabra
+- GET /api/tasks?search=palabra
 
 4. Paginación
 
-• GET /api/tasks?page=2
+- GET /api/tasks?page=2
 
 5. Ejemplo de respuesta Json
 
