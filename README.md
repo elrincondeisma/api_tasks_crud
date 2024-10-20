@@ -48,26 +48,152 @@ La API ofrece los siguientes endpoints para gestionar las tareas:
 
 ```json
     {
-        "current_page": 1,
-        "data": [
-            {
-                "id": 1,
-                "description": "Hacer las compras",
-                "completed": false,
-                "created_at": "2024-10-20T12:34:56.000000Z",
-                "updated_at": "2024-10-20T12:34:56.000000Z"
-            },
-            {
-                "id": 2,
-                "description": "Reunión de equipo",
-                "completed": true,
-                "created_at": "2024-10-20T12:35:56.000000Z",
-                "updated_at": "2024-10-20T12:35:56.000000Z"
-            }
-        ],
-        "total": 50,
-        "last_page": 5
-    }    
+    "current_page": 1,
+    "data": [
+        {
+            "id": 1,
+            "description": "Ducimus aspernatur eos in sunt maiores.",
+            "completed": 0,
+            "created_at": "2024-10-20T09:57:53.000000Z",
+            "updated_at": "2024-10-20T09:57:53.000000Z"
+        },
+        {
+            "id": 2,
+            "description": "Dicta in hic nisi fugit quo est est.",
+            "completed": 0,
+            "created_at": "2024-10-20T09:57:53.000000Z",
+            "updated_at": "2024-10-20T09:57:53.000000Z"
+        },
+        {
+            "id": 3,
+            "description": "Beatae blanditiis ad eum eveniet debitis accusamus maiores.",
+            "completed": 1,
+            "created_at": "2024-10-20T09:57:53.000000Z",
+            "updated_at": "2024-10-20T09:57:53.000000Z"
+        },
+        {
+            "id": 4,
+            "description": "Enim incidunt quam quis illum sed provident aperiam.",
+            "completed": 0,
+            "created_at": "2024-10-20T09:57:53.000000Z",
+            "updated_at": "2024-10-20T09:57:53.000000Z"
+        },
+        {
+            "id": 5,
+            "description": "Magni dicta non ipsum sed.",
+            "completed": 0,
+            "created_at": "2024-10-20T09:57:53.000000Z",
+            "updated_at": "2024-10-20T09:57:53.000000Z"
+        },
+        {
+            "id": 6,
+            "description": "Reiciendis reiciendis eaque est ut.",
+            "completed": 1,
+            "created_at": "2024-10-20T09:57:53.000000Z",
+            "updated_at": "2024-10-20T09:57:53.000000Z"
+        },
+        {
+            "id": 7,
+            "description": "Nulla neque sunt voluptatum amet dolores rerum.",
+            "completed": 0,
+            "created_at": "2024-10-20T09:57:53.000000Z",
+            "updated_at": "2024-10-20T09:57:53.000000Z"
+        },
+        {
+            "id": 8,
+            "description": "Incidunt illo voluptate aut cum.",
+            "completed": 0,
+            "created_at": "2024-10-20T09:57:53.000000Z",
+            "updated_at": "2024-10-20T09:57:53.000000Z"
+        },
+        {
+            "id": 9,
+            "description": "Adipisci corporis nostrum ipsam aut.",
+            "completed": 1,
+            "created_at": "2024-10-20T09:57:53.000000Z",
+            "updated_at": "2024-10-20T09:57:53.000000Z"
+        },
+        {
+            "id": 10,
+            "description": "Quia est est est.",
+            "completed": 0,
+            "created_at": "2024-10-20T09:57:53.000000Z",
+            "updated_at": "2024-10-20T09:57:53.000000Z"
+        }
+    ],
+    "first_page_url": "http://127.0.0.1:8000/api/tasks?page=1",
+    "from": 1,
+    "last_page": 10,
+    "last_page_url": "http://127.0.0.1:8000/api/tasks?page=10",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "active": false
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=1",
+            "label": "1",
+            "active": true
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=2",
+            "label": "2",
+            "active": false
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=3",
+            "label": "3",
+            "active": false
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=4",
+            "label": "4",
+            "active": false
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=5",
+            "label": "5",
+            "active": false
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=6",
+            "label": "6",
+            "active": false
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=7",
+            "label": "7",
+            "active": false
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=8",
+            "label": "8",
+            "active": false
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=9",
+            "label": "9",
+            "active": false
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=10",
+            "label": "10",
+            "active": false
+        },
+        {
+            "url": "http://127.0.0.1:8000/api/tasks?page=2",
+            "label": "Next &raquo;",
+            "active": false
+        }
+    ],
+    "next_page_url": "http://127.0.0.1:8000/api/tasks?page=2",
+    "path": "http://127.0.0.1:8000/api/tasks",
+    "per_page": 10,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 100
+} 
 ```
 6. Arranque del servidor
 
